@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Container, Button, Typography, Grid, FormLabel, FormControlLabel, RadioGroup, Radio, Paper, Grow, Card, CardContent, CardMedia, CardActionArea } from '@material-ui/core';
 import img from '../../assetes/image/Car.jpg';
 import softwareerror from '../../assetes/image/softwareerror.jpg';
 import autopiloterror from '../../assetes/image/autopiloterror.jpg';
 import carconcept from '../../assetes/image/carconcept.jpg';
 import { useStyles } from '../styles/Home';
+import { init } from 'ityped';
 
 import newimg0 from '../../assetes/image/newimg/schedule-services-v3.svg';
 import newimg1 from '../../assetes/image/newimg/5.png';
@@ -30,18 +31,29 @@ import newimg18 from '../../assetes/image/newimg/Transmission.png';
 
 const Home = () => {
     const classes = useStyles();
+    const textRef = useRef();
     const [spacing] = useState(2);
-
     const [value, setValue] = useState(0);
+
+    useEffect(() => {
+        init(textRef.current, {
+            showCursor: true,
+            backDelay: 1500,
+            backSpeed: 60,
+            strings: ["Car Service", "All Light Commercial Vehicale", "Software Error"]
+        })
+    }, [])
+
     return (
         <React.Fragment>
             <Container >
                 <div className={classes.mainSetion}>
                     <Container>
-                        <p className={classes.mainSectionText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga inventore possimus hic officia enim ex molestiae dignissimos tempore, atque voluptate repudiandae, nulla laboriosam? Nesciunt, natus itaque. Nostrum dolores vero minus.</p>
+                        {/* <p className={classes.mainSectionText}>It took a pandemic to teach humans that nothing matters more than life, not even money. The COVID-19 will eventually curb with the constant efforts everyone is putting in. But, if demographics are to be compared in India, road accidents have taken much more lives as compared to this virus. Thus, the need of the hour is to make sure the cars you buy are safe. So, here is a list of 10 essential safety features that a car must be equipped with.</p>
                         <Button variant="outlined" color="primary">Sefty</Button>
                         <p className={classes.mainSectionText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga inventore possimus hic officia enim ex molestiae dignissimos tempore, atque voluptate repudiandae, nulla laboriosam? Nesciunt, natus itaque. Nostrum dolores vero minus.</p>
-                        <Button variant="outlined" color="primary">Service</Button>
+                        <Button variant="outlined" color="primary">Service</Button> */}
+                        WrokShop <span ref={textRef}></span>
                     </Container>
                     <img className={classes.mainSectionImage} src={img} alt="image" />
                 </div>

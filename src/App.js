@@ -5,6 +5,7 @@ import Home from './components/pages/Home';
 import Safety from './components/pages/Safty';
 import Service from './components/pages/Service';
 import Contact from './components/pages/Contact';
+import Footer from './components/pages/Footer';
 
 const App = () => {
   return (
@@ -17,6 +18,9 @@ const App = () => {
           <Route exact path="/service" component={Service} />
           <Route exact path="/contact" component={Contact} />
         </Switch>
+        {/* <br />
+        <br />
+        <Footer /> */}
       </BrowserRouter>
     </div>
   )

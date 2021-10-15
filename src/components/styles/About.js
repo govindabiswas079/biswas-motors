@@ -53,12 +53,12 @@ export const useStyles = makeStyles((theme) => ({
     },
     serviceSectionPaper: {
         textAlign: 'center',
-        height: 200,
-        width: '200px',
-        transition: 'all',
+        height: 300,
+        width: '270px',
+        transition: 'ease-in-out 0.4s',
         position: 'relative',
         '&:Hover': {
-            transform: 'scale(1.1)',
+            transform: 'scale(1.03)',
 
         },
         [theme.breakpoints.down(512)]: {
@@ -70,4 +70,9 @@ export const useStyles = makeStyles((theme) => ({
         width: 60,
         marginTop: 10,
     },
+    heroSectionContent: {
+        margin: "10px",
+        textAlign: 'justify',
+        fontFamily: "sans-serif"
+    }
 }));
