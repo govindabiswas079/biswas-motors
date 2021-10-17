@@ -18,9 +18,10 @@ import img8 from '../../assetes/image/suspension.png';
 
 import img9 from '../../assetes/image/img9.jpg';
 import img10 from '../../assetes/image/img10.jpg';
-import img11 from '../../assetes/image/img11.jpeg';
 import img12 from '../../assetes/image/error.jpg';
-import img13 from '../../assetes/image/error1.jpg'
+import img13 from '../../assetes/image/error1.jpg';
+
+
 
 const Service = () => {
     const classes = useStyles();
@@ -30,19 +31,9 @@ const Service = () => {
         <React.Fragment>
             <React.Fragment><br /><br />
                 <div>
-                    <img style={{ width: "100%", height: "450px" }} src={mainimg} alt="" />
+                    <img style={{ width: "100%", height: "400px" }} src={mainimg} alt="" />
                 </div>
                 <Container >
-                    {/* <div className={classes.mainSetion}>
-                        <Container>
-                            <p className={classes.mainSectionText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga inventore possimus hic officia enim ex molestiae dignissimos tempore, atque voluptate repudiandae, nulla laboriosam? Nesciunt, natus itaque. Nostrum dolores vero minus.</p>
-                            <Button variant="outlined" color="primary">Sefty</Button>
-                            <p className={classes.mainSectionText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga inventore possimus hic officia enim ex molestiae dignissimos tempore, atque voluptate repudiandae, nulla laboriosam? Nesciunt, natus itaque. Nostrum dolores vero minus.</p>
-                            <Button variant="outlined" color="primary">Service</Button>
-                        </Container>
-                        <img className={classes.mainSectionImage} src={img} alt="image" />
-                    </div> */}
-
                     <hr />
                     <Container maxWidth="md">
                         <Container className={classes.softwareServiceSetion}>
@@ -111,80 +102,112 @@ const Service = () => {
                                         <Grid container className={classes.serviceSectionGrid} spacing={spacing}>
                                             <Grid item>
                                                 <Paper className={classes.serviceSectionPaper}>
-                                                    <img src={img1} className={classes.serviceSectionImage} alt="img" /><br />
-                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">Home</Typography>
-                                                    <h5 style={{ fontFamily: "sans-serif" }} className={classes.heroSectionContent}>
-                                                        <hr />
+                                                    <div className={classes.imgbg}>
+                                                        <img src={img1} className={classes.serviceSectionImage} alt="img" /><br />
+                                                    </div>
+                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">
+                                                        Maintenance
+                                                    </Typography><br />
+                                                    <hr className={classes.line} />
+                                                    <h5 className={classes.heroSectionContent}>
                                                         Caring for your car and keeping it in proper running order takes a little bit of effort, but you definitely don’t have to be a mechanical whiz to keep your vehicle running well. The biggest hurdle is being aware of what needs to be done—and how often—for optimal vehicle upkeep. {/* By knowing the basics about what your car needs, and when you should perform routine car maintenance, you’ll ensure that your car is in top-running condition. */}
                                                     </h5>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
                                                 <Paper className={classes.serviceSectionPaper}>
-                                                    <img src={img2} className={classes.serviceSectionImage} alt="img" /><br />
-                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">Home</Typography><br /><br />
-                                                    <h5 style={{ fontFamily: "sans-serif" }} className={classes.heroSectionContent}>
-                                                        <hr />
+                                                    <div className={classes.imgbg}>
+                                                        <img src={img2} className={classes.serviceSectionImage} alt="img" /><br />
+                                                    </div>
+                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">
+                                                        Car Clutch Works
+                                                    </Typography><br />
+                                                    <hr className={classes.line} />
+                                                    <h5 className={classes.heroSectionContent}>
                                                         When the clutch pedal is released, the thrust bearing is withdrawn and the diaphragm-spring load once again clamps the driven plate to the flywheel to resume the transmission of power.
                                                     </h5>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
                                                 <Paper className={classes.serviceSectionPaper}>
-                                                    <img src={img3} className={classes.serviceSectionImage} alt="img" /><br />
-                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">Home</Typography><br /><br />
-                                                    <h5 style={{ fontFamily: "sans-serif" }} className={classes.heroSectionContent}>
-                                                        <hr />
+                                                    <div className={classes.imgbg}>
+                                                        <img src={img3} className={classes.serviceSectionImage} alt="img" /><br />
+                                                    </div>
+                                                    <Typography style={{ marginTop: "25px", backgroundColor: "" }} variant="h5" color="primary">
+                                                        Oil Filter Element
+                                                    </Typography><br />
+                                                    <hr className={classes.line} />
+                                                    <h5 className={classes.heroSectionContent}>
                                                         A dirty engine air filter can allow dirt and other particulates into your car's engine and reduce its efficiency. Inspect your car's air filter once a year and replace it as needed.
                                                     </h5>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
                                                 <Paper className={classes.serviceSectionPaper}>
-                                                    <img src={img4} className={classes.serviceSectionImage} alt="img" /><br />
-                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">Home</Typography>
-                                                    <h5 style={{ fontFamily: "sans-serif" }} className={classes.heroSectionContent}>
-                                                        <hr />
+                                                    <div className={classes.imgbg}>
+                                                        <img src={img4} className={classes.serviceSectionImage} alt="img" /><br />
+                                                    </div>
+                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">
+                                                        Engine Exhaust System
+                                                    </Typography><br />
+                                                    <hr className={classes.line} />
+                                                    <h5 className={classes.heroSectionContent}>
                                                         The majority of vehicle exhaust emissions are composed of carbon dioxide, nitrogen, water vapor, and oxygen in unconsumed air. Carbon monoxide, unburned fuel, nitrogen oxides, and particulate matter such as mercury are also present in vehicle exhaust emissions in smaller quantities.
                                                     </h5>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
                                                 <Paper className={classes.serviceSectionPaper}>
-                                                    <img src={img5} className={classes.serviceSectionImage} alt="img" /><br />
-                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">Home</Typography><br />
-                                                    <h5 style={{ fontFamily: "sans-serif" }} className={classes.heroSectionContent}>
-                                                        <hr />
+                                                    <div className={classes.imgbg}>
+                                                        <img src={img5} className={classes.serviceSectionImage} alt="img" /><br />
+                                                    </div>
+                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">
+                                                        Engine Oil Maintenance
+                                                    </Typography><br />
+                                                    <hr className={classes.line} />
+                                                    <h5 className={classes.heroSectionContent}>
                                                         Routinely checking and changing your car's oil is essential to keeping its engine in running condition. Check your oil each month and change it as directed in the car's owner's manual.
                                                     </h5>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
                                                 <Paper className={classes.serviceSectionPaper}>
-                                                    <img src={img6} className={classes.serviceSectionImage} alt="img" /><br />
-                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">Home</Typography>
-                                                    <h5 style={{ fontFamily: "sans-serif" }} className={classes.heroSectionContent}>
-                                                        <hr />
+                                                    <div className={classes.imgbg}>
+                                                        <img src={img6} className={classes.serviceSectionImage} alt="img" /><br />
+                                                    </div>
+                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">
+                                                        Self Starter Motor
+                                                    </Typography><br />
+                                                    <hr className={classes.line} />
+                                                    <h5 className={classes.heroSectionContent}>
                                                         The starter has gears which mesh with a large flywheel gear on the back side of the engine, which turns the central crank shaft. Because this is a lot of physical weight and friction to overcome, starter motors are generally powerful, high-speed motors and use an ignition coil to ramp up their power before engaging.
                                                     </h5>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
                                                 <Paper className={classes.serviceSectionPaper}>
-                                                    <img src={img7} className={classes.serviceSectionImage} alt="img" /><br />
-                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">Home</Typography><br />
-                                                    <h5 style={{ fontFamily: "sans-serif" }} className={classes.heroSectionContent}>
-                                                        <hr />
+                                                    <div className={classes.imgbg}>
+                                                        <img src={img7} className={classes.serviceSectionImage} alt="img" /><br />
+                                                    </div>
+                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">
+                                                        General Repairing Work
+                                                    </Typography><br />
+                                                    <hr className={classes.line} />
+                                                    <h5 className={classes.heroSectionContent}>
                                                         An engine repair also includes rebuilding the head, replacing worn pistons, new timing components, decking the block, replacing the rod and main bearings, and replacing the freeze plugs. Only the necessary repair and parts replacement should be done when completing an engine inspection.
                                                     </h5>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
                                                 <Paper className={classes.serviceSectionPaper}>
-                                                    <img src={img8} className={classes.serviceSectionImage} alt="img" /><br />
-                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">Home</Typography><br />
-                                                    <h5 style={{ fontFamily: "sans-serif" }} className={classes.heroSectionContent}>
-                                                        <hr />
+                                                    <div className={classes.imgbg}>
+                                                        <img src={img8} className={classes.serviceSectionImage} alt="img" /><br />
+                                                    </div>
+                                                    <Typography style={{ marginTop: "25px" }} variant="h5" color="primary">
+                                                        Brake Suspension
+                                                    </Typography><br />
+                                                    <hr className={classes.line} />
+                                                    <h5 className={classes.heroSectionContent}>
                                                         All that get up & go doesn’t do any good if you can’t slow down & stop. Learn what to look (and listen) for, so you can replace your brake pads before it’s too late.
                                                     </h5>
                                                 </Paper>
@@ -245,11 +268,10 @@ const Service = () => {
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="div">
-                                            Lizard
+                                            Electronic Power Steering (EPS) Module Repair Service
                                         </Typography><hr />
                                         <Typography style={{ textAlign: 'justify' }} variant="body2" color="text.secondary">
-                                            Lizards are a widespread group of squamate reptiles, with over 6,000
-                                            species, ranging across all continents except Antarctica
+                                            Turn ignition switch OFF, and turn ignition switch ON. The EPS indicator comes on for about 6 seconds. Within 4 seconds of turning the switch ON, while the EPS indicator is on, turn the steering wheel 45° to left from straight ahead driving position, and hold steering wheel in position until EPS indicator goes off
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>
@@ -258,7 +280,7 @@ const Service = () => {
                     </Container>
                 </Container>
             </React.Fragment>
-        </React.Fragment>
+        </React.Fragment >
     )
 }
 

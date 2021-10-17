@@ -4,32 +4,66 @@ export const useStyles = makeStyles((theme) => ({
     mainSetion: {
         display: 'flex',
         flex: 1,
-        marginTop: '7%',
+        marginTop: '4%',
         [theme.breakpoints.down(896)]: {
             flexDirection: 'column-reverse',
         }
     },
-    mainSectionText: {
-        justifyContent: 'center',
+    intro: {
+        backgroundColor: "white",
+        display: "flex",
+    },
+    h1: {
+        fontSize: 50,
+        margin: "10px 0",
+        color: "blue",
         [theme.breakpoints.down(896)]: {
-            //width: "100%",
-            marginTop: '10%'
-        }
+            fontSize: 35,
+            margin: "5px 0"
+        },
+    },
+    h2: {
+        fontSize: 35,
+        [theme.breakpoints.down(896)]: {
+            fontSize: 20,
+        },
+    },
+    h3: {
+        fontSize: 30,
+        [theme.breakpoints.down(896)]: {
+            fontSize: 18,
+        },
+    },
+    span: {
+        fontSize: "inherit",
+        color: "crimson",
     },
     mainSectionImage: {
         width: "30%",
         height: "300px",
         [theme.breakpoints.down(896)]: {
-            //width: "100%",
-            display: 'none',
+            width: "100%",
+            //display: 'none',
             marginTop: '10px'
+        },
+        [theme.breakpoints.down(450)]: {
+            width: "100%",
+            //display: 'none',
+            height: '200px',
+            marginTop: '15px'
         }
     },
     welcomHeadig: {
-        color: 'blue', fontWeight: 'bold', fontSize: '30px', fontFamily: 'sans-serif', textAlign: 'center'
+        color: 'blue',
+        fontWeight: 'bold',
+        fontSize: '30px',
+        fontFamily: 'sans-serif',
+        textAlign: 'center'
     },
     welcomParagraph: {
-        color: 'gray', textAlign: 'justify', fontWeight: 'bold'
+        color: 'gray',
+        textAlign: 'justify',
+        fontWeight: 'bold'
     },
     heroSection: {
         flexGrow: 1,
@@ -54,9 +88,48 @@ export const useStyles = makeStyles((theme) => ({
         width: 60,
         marginTop: 10,
     },
+    imgbg: {
+        backgroundColor: "#f2f3f5",
+        height: "70px",
+        borderBottomLeftRadius: "50%",
+        borderBottomRightRadius: "50%",
+        width: "100%",
+        //borderRadius: "0 0 50% 50%",
+    },
     /* heroSectionContent: {
         marginLeft: 21
     }, */
+    /*  */
+    /* Trending */
+    TrendingServiceSectionRes: {
+        //padding: theme.spacing(2),
+        textAlign: 'center',
+        height: 250,
+        //backgroundColor: 'blue',
+        color: theme.palette.text.black,
+        transition: 'ease-in-out 0.4s',
+        position: 'relative',
+        '&:Hover': {
+            transform: 'scale(1.03)',
+            //boxShadow: ['none', null, '0 4px 10px rgba(39, 83, 123, 0.12)'],
+        }
+    },
+    Trendingimgbg: {
+        backgroundColor: "#f2f3f5",
+        height: "105px",
+        borderBottomLeftRadius: "50%",
+        borderBottomRightRadius: "50%",
+        width: "100%",
+        //borderRadius: "0 0 50% 50%",
+    },
+    TrendingServiceSectionImage: {
+        width: 170,
+        //marginTop: 5,
+    },    
+    TrendingServiceSectionContent: {
+
+    },
+    /*  */
     generalServiceSection: {
         padding: theme.spacing(2),
         textAlign: 'center',
@@ -83,6 +156,7 @@ export const useStyles = makeStyles((theme) => ({
             //boxShadow: ['none', null, '0 4px 10px rgba(39, 83, 123, 0.12)'],
         }
     },
+
     generalServiceSectionImage: {
         width: 60,
         marginTop: 10,
@@ -95,17 +169,17 @@ export const useStyles = makeStyles((theme) => ({
         marginTop: 25,
         [theme.breakpoints.down(896)]: {
             flexDirection: 'column',
+            //width: "100%"
         }
     },
     softwareServiceCard: {
-        margin: '0 5px',
+        margin: '0 0px',
         width: "50%",
         [theme.breakpoints.down(896)]: {
-            marginTop: '15px',
+            margin: '15px 0',
             width: "100%",
         },
     },
-
     facilityServiceSectionPaper: {
         padding: theme.spacing(2),
         textAlign: 'center',

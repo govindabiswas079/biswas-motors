@@ -36,8 +36,10 @@ const Navbar = () => {
         <SwipeableDrawer onClick={closeMobileMenu} anchorEl={open} id="mobilr-menu" keepMounted open={isMobileMenuOpen}>
             <List>
                 {/* <Typography component={Link} to="/" variant="h5" style={{ textDecoration: "none", color: "blue", margin: 10 }}>Biswas Motors</Typography> */}
-                <img style={{ width: "70px", marginLeft: "38px", }} src={imglogo1} />
-                <Divider />
+                {/* <Button type="button" component={Link} to="/">
+                    <img style={{ width: "70px", marginLeft: "38px", }} src={imglogo1} />
+                </Button> */}
+                {/* <Divider /> */}
                 <div style={{ margin: "25px" }}>
                     <MenuItem onClick={closeMobileMenu} component={Link} to="/">Home</MenuItem>
                     <Divider />
@@ -55,7 +57,9 @@ const Navbar = () => {
         <React.Fragment>
             <AppBar color="inherit">
                 <Toolbar>
-                    <img component={Link} to="/" style={{ width: 60 }} src={imglogo} />
+                    <Button type="button" component={Link} to="/">
+                        <img style={{ width: 60, cursor: "pointer" }} src={imglogo} />
+                    </Button>
                     <div style={{ flexGrow: 1, }}></div>
                     <div className={classes.Navbar}>
                         <Button component={Link} to="/">Home</Button>

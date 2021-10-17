@@ -37,7 +37,7 @@ export const useStyles = makeStyles((theme) => ({
         margin: '0 5px',
         width: '50%',
         [theme.breakpoints.down(896)]: {
-            marginTop: '15px',
+            margin: '15px 0',
             width: '100%',
         }
     },
@@ -53,7 +53,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     serviceSectionPaper: {
         textAlign: 'center',
-        height: 300,
+        height: 338,
         width: '270px',
         transition: 'ease-in-out 0.4s',
         position: 'relative',
@@ -61,18 +61,41 @@ export const useStyles = makeStyles((theme) => ({
             transform: 'scale(1.03)',
 
         },
-        [theme.breakpoints.down(512)]: {
-            width: 250,
+        /* [theme.breakpoints.down(512)]: {
+            width: 200,
             height: 300,
+        }, */
+        [theme.breakpoints.down(699)]: {
+            width: 350,
+            height: 350,
         }
     },
     serviceSectionImage: {
         width: 60,
         marginTop: 10,
     },
+    imgbg: {
+        backgroundColor: "#f2f3f5",
+        height: "100px",
+        borderBottomLeftRadius: "50%",
+        borderBottomRightRadius: "50%",
+        width: "100%",
+        //borderRadius: "0 0 50% 50%",
+    },
+    line: {
+        margin: "0 10px",
+        backgroundColor: "red",
+        height: "1px",
+        borderRadius: "50px"
+    },
     heroSectionContent: {
+        color: "grey",
         margin: "10px",
         textAlign: 'justify',
-        fontFamily: "sans-serif"
+        fontFamily: "sans-serif",
+        [theme.breakpoints.down(699)]: {
+            marginTop: "45px",
+            //height: 350,
+        }
     }
 }));

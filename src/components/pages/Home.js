@@ -3,7 +3,6 @@ import { Container, Button, Typography, Grid, FormLabel, FormControlLabel, Radio
 import img from '../../assetes/image/Car.jpg';
 import softwareerror from '../../assetes/image/softwareerror.jpg';
 import autopiloterror from '../../assetes/image/autopiloterror.jpg';
-import carconcept from '../../assetes/image/carconcept.jpg';
 import { useStyles } from '../styles/Home';
 import { init } from 'ityped';
 
@@ -29,6 +28,11 @@ import newimg16 from '../../assetes/image/newimg/Safety_Ergonomics.png';
 import newimg17 from '../../assetes/image/newimg/Electronics.png';
 import newimg18 from '../../assetes/image/newimg/Transmission.png';
 
+import trending19 from '../../assetes/image/trending/AllAC.png';
+import trending20 from '../../assetes/image/trending/AllCLenaing.png';
+import trending21 from '../../assetes/image/trending/DetailingServices.png';
+import trending22 from '../../assetes/image/trending/LightsFitments.png';
+
 const Home = () => {
     const classes = useStyles();
     const textRef = useRef();
@@ -40,25 +44,31 @@ const Home = () => {
             showCursor: true,
             backDelay: 1500,
             backSpeed: 60,
-            strings: ["Car Service", "All Light Commercial Vehicale", "Software Error"]
+            strings: ["Periodic Services", "AC Service & Repair", "Custom Services", "Windshields & Lights", "Clutch & Fitments", "Light", "Tyres & Wheel Care", "Steering", "ELECTRONINS WORKS", "TRANSMISSION", "SAFETY & ERGONOMICS",]
         })
     }, [])
 
     return (
         <React.Fragment>
-            <Container >
+            <Container>
                 <div className={classes.mainSetion}>
                     <Container>
-                        {/* <p className={classes.mainSectionText}>It took a pandemic to teach humans that nothing matters more than life, not even money. The COVID-19 will eventually curb with the constant efforts everyone is putting in. But, if demographics are to be compared in India, road accidents have taken much more lives as compared to this virus. Thus, the need of the hour is to make sure the cars you buy are safe. So, here is a list of 10 essential safety features that a car must be equipped with.</p>
-                        <Button variant="outlined" color="primary">Sefty</Button>
-                        <p className={classes.mainSectionText}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga inventore possimus hic officia enim ex molestiae dignissimos tempore, atque voluptate repudiandae, nulla laboriosam? Nesciunt, natus itaque. Nostrum dolores vero minus.</p>
-                        <Button variant="outlined" color="primary">Service</Button> */}
-                        WrokShop <span ref={textRef}></span>
+                        <div className={classes.intro} id="intro">
+                            <div className={classes.right}>
+                                <div className={classes.wrapper}>
+                                    <h2 className={classes.h2}>Hi There, Welcome To My Work Shop</h2>
+                                    <h1 className={classes.h1}><span style={{ color: "Highlight" }}>I'm</span><br /> Biswas Motor's</h1>
+                                    <h3 className={classes.h3}>
+                                        Our Service's <span className={classes.span} ref={textRef}></span>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
                     </Container>
                     <img className={classes.mainSectionImage} src={img} alt="image" />
                 </div>
                 <hr />
-                <Container >
+                <Container>
                     <div className={classes.welcomContent}>
                         <h3 className={classes.welcomHeadig}>Welcom To Biswas Mototr's</h3>
                         <p className={classes.welcomParagraph}>
@@ -78,55 +88,73 @@ const Home = () => {
                                     <Grid container className={classes.heroSectionGrid} spacing={spacing}>
                                         <Grid item>
                                             <Paper variant="outlined" className={classes.heroSectionPaper} >
-                                                <img src={newimg0} className={classes.heroSectionImage} alt="img" />
+                                                <div className={classes.imgbg}>
+                                                    <img src={newimg0} className={classes.heroSectionImage} alt="img" />
+                                                </div>
                                                 <h5 className={classes.heroSectionContent}>Periodic Services</h5>
                                             </Paper>
                                         </Grid>
                                         <Grid item>
                                             <Paper variant="outlined" className={classes.heroSectionPaper} >
-                                                <img src={newimg1} className={classes.heroSectionImage} alt="img" />
+                                                <div className={classes.imgbg}>
+                                                    <img src={newimg1} className={classes.heroSectionImage} alt="img" />
+                                                </div>
                                                 <h5 className={classes.heroSectionContent}>AC Service &amp; Repair</h5>
                                             </Paper>
                                         </Grid>
                                         <Grid item>
                                             <Paper variant="outlined" className={classes.heroSectionPaper} >
-                                                <img src={newimg2} className={classes.heroSectionImage} alt="img" />
+                                                <div className={classes.imgbg}>
+                                                    <img src={newimg2} className={classes.heroSectionImage} alt="img" />
+                                                </div>
                                                 <h5 className={classes.heroSectionContent}>Custom Services</h5>
                                             </Paper>
                                         </Grid>
                                         <Grid item>
                                             <Paper variant="outlined" className={classes.heroSectionPaper} >
-                                                <img src={newimg3} className={classes.heroSectionImage} alt="img" />
+                                                <div className={classes.imgbg}>
+                                                    <img src={newimg3} className={classes.heroSectionImage} alt="img" />
+                                                </div>
                                                 <h5 className={classes.heroSectionContent}>Windshields &amp; Lights</h5>
                                             </Paper>
                                         </Grid>
                                         <Grid item>
                                             <Paper variant="outlined" className={classes.heroSectionPaper} >
-                                                <img src={newimg4} className={classes.heroSectionImage} alt="img" />
+                                                <div className={classes.imgbg}>
+                                                    <img src={newimg4} className={classes.heroSectionImage} alt="img" />
+                                                </div>
                                                 <h5 className={classes.heroSectionContent}>Clutch &amp; Fitments</h5>
                                             </Paper>
                                         </Grid>
                                         <Grid item>
                                             <Paper variant="outlined" className={classes.heroSectionPaper} >
-                                                <img src={newimg5} className={classes.heroSectionImage} alt="img" />
+                                                <div className={classes.imgbg}>
+                                                    <img src={newimg5} className={classes.heroSectionImage} alt="img" />
+                                                </div>
                                                 <h5 className={classes.heroSectionContent}>Steering</h5>
                                             </Paper>
                                         </Grid>
                                         <Grid item>
                                             <Paper variant="outlined" className={classes.heroSectionPaper} >
-                                                <img src={newimg6} className={classes.heroSectionImage} alt="img" />
+                                                <div className={classes.imgbg}>
+                                                    <img src={newimg6} className={classes.heroSectionImage} alt="img" />
+                                                </div>
                                                 <h5 className={classes.heroSectionContent}>Light</h5>
                                             </Paper>
                                         </Grid>
                                         <Grid item>
                                             <Paper variant="outlined" className={classes.heroSectionPaper} >
-                                                <img src={newimg7} className={classes.heroSectionImage} alt="img" />
+                                                <div className={classes.imgbg}>
+                                                    <img src={newimg7} className={classes.heroSectionImage} alt="img" />
+                                                </div>
                                                 <h5 className={classes.heroSectionContent}>Tyres &amp; Wheel Care</h5>
                                             </Paper>
                                         </Grid>
                                         <Grid item>
                                             <Paper variant="outlined" className={classes.heroSectionPaper} >
-                                                <img src={newimg8} className={classes.heroSectionImage} alt="img" />
+                                                <div className={classes.imgbg}>
+                                                    <img src={newimg8} className={classes.heroSectionImage} alt="img" />
+                                                </div>
                                                 <h5 className={classes.heroSectionContent}>Custome Repair</h5>
                                             </Paper>
                                         </Grid>
@@ -136,62 +164,95 @@ const Home = () => {
                         </Grow>
                     </div>
                     <Container maxWidth="md">
-                        <Container>
-                            <Grid container spacing={3}>
-                                <Grid item xs={12}>
-                                    <Paper className={classes.generalServiceSection}>
-                                        <div>
-                                            <img style={{ margin: "0 30px" }} className={classes.generalServiceSectionImage} src={newimg17} alt="img" />
-                                            <img style={{ margin: "0 30px" }} className={classes.generalServiceSectionImage} src={newimg17} alt="img" />
-                                            <img style={{ margin: "0 30px" }} className={classes.generalServiceSectionImage} src={newimg17} alt="img" />
-                                            <img style={{ margin: "0 30px" }} className={classes.generalServiceSectionImage} src={newimg17} alt="img" />
-                                        </div>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item xs={12} sm={6}>
-                                    <Paper className={classes.generalServiceSection}>
-                                        <img className={classes.generalServiceSectionImage} src={newimg17} alt="img" />
-                                        <h5 className={classes.generalServiceSectionContent}>ELECTRONINS WORKS</h5>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item xs={12} sm={6}>
-                                    <Paper className={classes.generalServiceSection}>
-                                        <img className={classes.generalServiceSectionImage} src={newimg18} alt="alt" />
-                                        <h5 className={classes.generalServiceSectionContent}>TRANSMISSION</h5>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item xs={6} sm={3}>
-                                    <Paper className={classes.generalServiceSectionRes}>
-                                        <img className={classes.generalServiceSectionImage} src={newimg13} alt="alt" />
-                                        <h5 className={classes.generalServiceSectionContent}>AIR CONDITIONING</h5>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item xs={6} sm={3}>
-                                    <Paper className={classes.generalServiceSectionRes}>
-                                        <img className={classes.generalServiceSectionImage} src={newimg14} alt="alt" />
-                                        <h5 className={classes.generalServiceSectionContent}>FASTENERS</h5>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item xs={6} sm={3}>
-                                    <Paper className={classes.generalServiceSectionRes}>
-                                        <img className={classes.generalServiceSectionImage} src={newimg15} alt="alt" />
-                                        <h5 className={classes.generalServiceSectionContent}>FUEL SYSTEM</h5>
-                                    </Paper>
-                                </Grid>
-
-                                <Grid item xs={6} sm={3}>
-                                    <Paper className={classes.generalServiceSectionRes}>
-                                        <img className={classes.generalServiceSectionImage} src={newimg16} alt="alt" />
-                                        <h5 className={classes.generalServiceSectionContent}>SAFETY &amp; ERGONOMICS</h5>
-                                    </Paper>
-                                </Grid>
+                        {/* <Container> */}
+                        <Grid container spacing={3}>
+                            <Grid item xs={6} sm={3}>
+                                <Paper className={classes.TrendingServiceSectionRes}>
+                                    <div className={classes.Trendingimgbg}>
+                                        <img className={classes.TrendingServiceSectionImage} src={trending19} alt="alt" />
+                                    </div>
+                                    <h6 className={classes.TrendingServiceSectionContent} style={{color: "blue"}}>Trending</h6>
+                                    <h5 className={classes.TrendingServiceSectionContent}>High Performance AC </h5>
+                                    <h6 className={classes.TrendingServiceSectionContent} style={{color: "grey"}}>Better Cooling Guaranteed</h6>
+                                </Paper>
                             </Grid>
-                        </Container>{/*  */}
+
+                            <Grid item xs={6} sm={3}>
+                                <Paper className={classes.TrendingServiceSectionRes}>
+                                    <div className={classes.Trendingimgbg}>
+                                        <img className={classes.TrendingServiceSectionImage} src={trending20} alt="alt" />
+                                    </div>
+                                    <h6 className={classes.TrendingServiceSectionContent} style={{color: "blue"}}>Trending</h6>
+                                    <h5 className={classes.TrendingServiceSectionContent}>Deep All Round Spa</h5>
+                                    <h6 className={classes.TrendingServiceSectionContent} style={{color: "grey"}}>Anti-Bacterial Treatment</h6>
+                                </Paper>
+                            </Grid>
+
+                            <Grid item xs={6} sm={3}>
+                                <Paper className={classes.TrendingServiceSectionRes}>
+                                    <div className={classes.Trendingimgbg}>
+                                        <img className={classes.TrendingServiceSectionImage} src={trending21} alt="alt" />
+                                    </div>
+                                    <h6 className={classes.TrendingServiceSectionContent} style={{color: "blue"}}>Trending</h6>
+                                    <h5 className={classes.TrendingServiceSectionContent}>Car Detailing</h5>
+                                    <h6 className={classes.TrendingServiceSectionContent} style={{color: "grey"}}>Enhance Car's Value By 30%</h6>
+                                </Paper>
+                            </Grid>
+
+                            <Grid item xs={6} sm={3}>
+                                <Paper className={classes.TrendingServiceSectionRes}>
+                                    <div className={classes.Trendingimgbg}>
+                                        <img className={classes.TrendingServiceSectionImage} src={trending22} alt="alt" />
+                                    </div>
+                                    <h6 className={classes.TrendingServiceSectionContent} style={{color: "blue"}}>Trending</h6>
+                                    <h5 className={classes.TrendingServiceSectionContent}>Lights &amp; Fitments</h5>
+                                    <h6 className={classes.TrendingServiceSectionContent} style={{color: "grey"}}>Bumper, Horn, Lights &amp; More</h6>
+                                </Paper>
+                            </Grid>
+
+                            <Grid item xs={12} sm={6}>
+                                <Paper className={classes.generalServiceSection}>
+                                    <img className={classes.generalServiceSectionImage} src={newimg17} alt="img" />
+                                    <h5 className={classes.generalServiceSectionContent}>ELECTRONINS WORKS</h5>
+                                </Paper>
+                            </Grid>
+
+                            <Grid item xs={12} sm={6}>
+                                <Paper className={classes.generalServiceSection}>
+                                    <img className={classes.generalServiceSectionImage} src={newimg18} alt="alt" />
+                                    <h5 className={classes.generalServiceSectionContent}>TRANSMISSION</h5>
+                                </Paper>
+                            </Grid>
+
+                            <Grid item xs={6} sm={3}>
+                                <Paper className={classes.generalServiceSectionRes}>
+                                    <img className={classes.generalServiceSectionImage} src={newimg13} alt="alt" />
+                                    <h5 className={classes.generalServiceSectionContent}>AIR CONDITIONING</h5>
+                                </Paper>
+                            </Grid>
+
+                            <Grid item xs={6} sm={3}>
+                                <Paper className={classes.generalServiceSectionRes}>
+                                    <img className={classes.generalServiceSectionImage} src={newimg14} alt="alt" />
+                                    <h5 className={classes.generalServiceSectionContent}>FASTENERS</h5>
+                                </Paper>
+                            </Grid>
+
+                            <Grid item xs={6} sm={3}>
+                                <Paper className={classes.generalServiceSectionRes}>
+                                    <img className={classes.generalServiceSectionImage} src={newimg15} alt="alt" />
+                                    <h5 className={classes.generalServiceSectionContent}>FUEL SYSTEM</h5>
+                                </Paper>
+                            </Grid>
+
+                            <Grid item xs={6} sm={3}>
+                                <Paper className={classes.generalServiceSectionRes}>
+                                    <img className={classes.generalServiceSectionImage} src={newimg16} alt="alt" />
+                                    <h5 className={classes.generalServiceSectionContent}>SAFETY &amp; ERGONOMICS</h5>
+                                </Paper>
+                            </Grid>
+                        </Grid>
+                        {/* </Container> */}{/*  */}
 
                         <Container style={{}} maxWidth="md" className={classes.softwareServiceSetion}>
                             <Card variant="outlined" className={classes.softwareServiceCard}>
@@ -212,7 +273,6 @@ const Home = () => {
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
-
                             <Card variant="outlined" className={classes.softwareServiceCard}>
                                 <CardActionArea>
                                     <CardMedia
