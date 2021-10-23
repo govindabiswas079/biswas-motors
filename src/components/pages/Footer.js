@@ -1,46 +1,38 @@
 import React from 'react';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { AppBar, Link, Typography } from '@material-ui/core';
+import { mergeClasses } from '@material-ui/styles';
+import { useStyles } from '../styles/Footer';
 
 const Footer = () => {
+    const classes = useStyles();
     return (
         <>
-            <MDBFooter color="blue" className="font-small pt-4 mt-4">
-                <MDBContainer fluid className="text-center text-md-left">
-                    <MDBRow>
-                        <MDBCol md="6">
-                            <h5 className="title">Footer Content</h5>
-                            <p>
-                                Here you can use rows and columns here to organize your footer
-                                content.
-                            </p>
-                        </MDBCol>
-                        <MDBCol md="6">
-                            <h5 className="title">Links</h5>
-                            <ul>
-                                <li className="list-unstyled">
-                                    <a href="#!">Link 1</a>
-                                </li>
-                                <li className="list-unstyled">
-                                    <a href="#!">Link 2</a>
-                                </li>
-                                <li className="list-unstyled">
-                                    <a href="#!">Link 3</a>
-                                </li>
-                                <li className="list-unstyled">
-                                    <a href="#!">Link 4</a>
-                                </li>
-                            </ul>
-                        </MDBCol>
-                    </MDBRow>
-                </MDBContainer>
-                <div className="footer-copyright text-center py-3">
-                    <MDBContainer fluid>
-                        &copy; {new Date().getFullYear()} Copyright: <a href="https://www.mdbootstrap.com"> MDBootstrap.com </a>
-                    </MDBContainer>
-                </div>
-            </MDBFooter>
+            <footer className={classes.footer}>
+                {/*  */} <h6>logo</h6>
+                <Typography variant="h6">
+                    biswas motors
+                </Typography>
+                <Typography variant="subtitle1" align="center" color="textSecondary" component="P">
+                    bswas motors
+                </Typography>
+                <CopyRight />
+            </footer>
         </>
     )
 }
 
 export default Footer
+
+function CopyRight() {
+    return (
+        <Typography variant="body2" color="textSecondary" align="center">
+            {'Copyright'}
+            <Link color="inherit" href="#">
+                biswasmotors{' '}{new Date().getFullYear}2017-2021
+            </Link>{' '}
+            {new Date().getFullYear}
+            {' . '}
+        </Typography>
+
+    );
+}

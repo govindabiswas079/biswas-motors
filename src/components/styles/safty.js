@@ -6,7 +6,7 @@ export const useStyles = makeStyles((theme) => ({
         flex: 1,
         marginTop: '4%',
         [theme.breakpoints.down(896)]: {
-            flexDirection: 'column-reverse',
+            flexDirection: 'column',
         }
     },
     intro: {

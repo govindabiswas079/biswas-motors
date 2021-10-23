@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Button, Typography, Grid, Paper, Grow, Card, CardContent, CardMedia, CardActionArea } from '@material-ui/core';
+import { DialogTitle, Container, Button, Typography, Grid, Paper, Grow, Card, CardContent, CardMedia, CardActionArea, TextField } from '@material-ui/core';
 import { useStyles } from '../styles/About';
 import img from '../../assetes/image/servicegrafic.png';
 import softwareerror from '../../assetes/image/softwareerror.jpg';
@@ -23,9 +23,35 @@ import img13 from '../../assetes/image/error1.jpg';
 
 
 
+import Dialog from '@material-ui/core/Dialog';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItem from '@material-ui/core/ListItem';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import Slide from '@material-ui/core/Slide';
+import imgc from '../../assetes/image/smartstart.jpg';
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
+
+
 const Service = () => {
     const classes = useStyles();
     const [spacing] = useState(2);
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     return (
         <React.Fragment>
@@ -112,6 +138,7 @@ const Service = () => {
                                                     <h5 className={classes.heroSectionContent}>
                                                         Caring for your car and keeping it in proper running order takes a little bit of effort, but you definitely don’t have to be a mechanical whiz to keep your vehicle running well. The biggest hurdle is being aware of what needs to be done—and how often—for optimal vehicle upkeep. {/* By knowing the basics about what your car needs, and when you should perform routine car maintenance, you’ll ensure that your car is in top-running condition. */}
                                                     </h5>
+                                                    <Button color="primary" variant="outlined" onClick={handleClickOpen}>Contained</Button>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
@@ -126,6 +153,7 @@ const Service = () => {
                                                     <h5 className={classes.heroSectionContent}>
                                                         When the clutch pedal is released, the thrust bearing is withdrawn and the diaphragm-spring load once again clamps the driven plate to the flywheel to resume the transmission of power.
                                                     </h5>
+                                                    <Button color="primary" variant="outlined" onClick={handleClickOpen}>Contained</Button>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
@@ -140,6 +168,7 @@ const Service = () => {
                                                     <h5 className={classes.heroSectionContent}>
                                                         A dirty engine air filter can allow dirt and other particulates into your car's engine and reduce its efficiency. Inspect your car's air filter once a year and replace it as needed.
                                                     </h5>
+                                                    <Button color="primary" variant="outlined" onClick={handleClickOpen}>Contained</Button>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
@@ -154,6 +183,7 @@ const Service = () => {
                                                     <h5 className={classes.heroSectionContent}>
                                                         The majority of vehicle exhaust emissions are composed of carbon dioxide, nitrogen, water vapor, and oxygen in unconsumed air. Carbon monoxide, unburned fuel, nitrogen oxides, and particulate matter such as mercury are also present in vehicle exhaust emissions in smaller quantities.
                                                     </h5>
+                                                    <Button color="primary" variant="outlined" onClick={handleClickOpen}>Contained</Button>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
@@ -168,6 +198,7 @@ const Service = () => {
                                                     <h5 className={classes.heroSectionContent}>
                                                         Routinely checking and changing your car's oil is essential to keeping its engine in running condition. Check your oil each month and change it as directed in the car's owner's manual.
                                                     </h5>
+                                                    <Button color="primary" variant="outlined" onClick={handleClickOpen}>Contained</Button>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
@@ -182,6 +213,7 @@ const Service = () => {
                                                     <h5 className={classes.heroSectionContent}>
                                                         The starter has gears which mesh with a large flywheel gear on the back side of the engine, which turns the central crank shaft. Because this is a lot of physical weight and friction to overcome, starter motors are generally powerful, high-speed motors and use an ignition coil to ramp up their power before engaging.
                                                     </h5>
+                                                    <Button color="primary" variant="outlined" onClick={handleClickOpen}>Contained</Button>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
@@ -196,6 +228,7 @@ const Service = () => {
                                                     <h5 className={classes.heroSectionContent}>
                                                         An engine repair also includes rebuilding the head, replacing worn pistons, new timing components, decking the block, replacing the rod and main bearings, and replacing the freeze plugs. Only the necessary repair and parts replacement should be done when completing an engine inspection.
                                                     </h5>
+                                                    <Button color="primary" variant="outlined" onClick={handleClickOpen}>Contained</Button>
                                                 </Paper>
                                             </Grid>
                                             <Grid item>
@@ -210,6 +243,7 @@ const Service = () => {
                                                     <h5 className={classes.heroSectionContent}>
                                                         All that get up & go doesn’t do any good if you can’t slow down & stop. Learn what to look (and listen) for, so you can replace your brake pads before it’s too late.
                                                     </h5>
+                                                    <Button color="primary" variant="outlined" onClick={handleClickOpen}>Contained</Button>
                                                 </Paper>
                                             </Grid>
                                         </Grid>
@@ -279,6 +313,69 @@ const Service = () => {
                         </Container>
                     </Container>
                 </Container>
+
+                <div>
+                    <Dialog
+                        fullScreen
+                        open={open}
+                        onClose={handleClose}
+                        TransitionComponent={Transition}
+                    ><br /><br /><br /><br />
+                        <AppBar sx={{ position: 'inherit' }}>
+                            <Toolbar>
+                                <IconButton
+                                    edge="start"
+                                    color="inherit"
+                                    onClick={handleClose}
+                                    aria-label="close"
+                                >
+                                    <CloseIcon />
+                                </IconButton>
+                                <Typography variant="h6" component="div">
+                                    Back
+                                </Typography>
+                                <div style={{ flexGrow: 1, }}></div>
+                                <Button autoFocus color="inherit" onClick={handleClose}>
+                                    Home
+                                </Button>
+                            </Toolbar>
+                        </AppBar>
+                        <Container>
+                            <DialogTitle>Subscribe</DialogTitle>
+                        </Container>
+
+                        <Container maxWidth="md">
+                            <div className={classes.contactSection}>
+                                <img className={classes.contactImage} src={imgc} alt="image" />
+                                <Container>
+                                    <Paper elevation={8} className={classes.contactPaper}>
+                                        <form className={classes.contactForm}>
+                                            <Typography variant="h6">Get In Touch</Typography>
+                                            <TextField className={classes.contactTextField} fullWidth type="text" name="name" label="Name" placeholder="Name" variant="outlined" />
+                                            <TextField className={classes.contactTextField} fullWidth type="text" name="number" label="Number" placeholder="Number" variant="outlined" />
+                                            <TextField className={classes.contactTextField} fullWidth type="text" name="email" label="Email" placeholder="Emai" variant="outlined" />
+                                            <TextField className={classes.contactTextField} fullWidth type="text" name="message" label="Message" placeholder="Message" variant="outlined" />
+                                            <TextField className={classes.contactTextField} fullWidth type="text" name="message" label="Message" placeholder="Message" variant="outlined" />
+                                            <Button variant="outlined" color="secondary" size="smalll" className={classes.contactButton}>Submit</Button>
+                                        </form>
+                                    </Paper>
+                                </Container>
+                            </div>
+                        </Container>
+                        {/* <List>
+                            <ListItem button>
+                                <ListItemText primary="Phone ringtone" secondary="Titania" />
+                            </ListItem>
+                            <Divider />
+                            <ListItem button>
+                                <ListItemText
+                                    primary="Default notification ringtone"
+                                    secondary="Tethys"
+                                />
+                            </ListItem>
+                        </List> */}
+                    </Dialog>
+                </div>
             </React.Fragment>
         </React.Fragment >
     )

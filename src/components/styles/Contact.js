@@ -45,10 +45,10 @@ export const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         height: 250,
         width: 250,
-        transition: 'all',
+        transition: 'ease-in-out 0.4s',
         position: 'relative',
         '&:Hover': {
-            transform: 'scale(1.1)',
+            transform: 'scale(1.03)',
 
         }
     },

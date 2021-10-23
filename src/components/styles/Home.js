@@ -102,9 +102,10 @@ export const useStyles = makeStyles((theme) => ({
     /*  */
     /* Trending */
     TrendingServiceSectionRes: {
-        //padding: theme.spacing(2),
+        padding: theme.spacing(2),
         textAlign: 'center',
-        height: 250,
+        //width: "100%",
+        height: 265,
         //backgroundColor: 'blue',
         color: theme.palette.text.black,
         transition: 'ease-in-out 0.4s',
@@ -112,7 +113,7 @@ export const useStyles = makeStyles((theme) => ({
         '&:Hover': {
             transform: 'scale(1.03)',
             //boxShadow: ['none', null, '0 4px 10px rgba(39, 83, 123, 0.12)'],
-        }
+        },
     },
     Trendingimgbg: {
         backgroundColor: "#f2f3f5",
@@ -123,9 +124,9 @@ export const useStyles = makeStyles((theme) => ({
         //borderRadius: "0 0 50% 50%",
     },
     TrendingServiceSectionImage: {
-        width: 170,
+        width: 130,
         //marginTop: 5,
-    },    
+    },
     TrendingServiceSectionContent: {
 
     },
@@ -141,12 +142,16 @@ export const useStyles = makeStyles((theme) => ({
         '&:Hover': {
             transform: 'scale(1.03)',
             //boxShadow: ['none', null, '0 4px 10px rgba(39, 83, 123, 0.12)'],
+        },
+        [theme.breakpoints.down(990)]: {
+            height: 215
         }
     },
     generalServiceSectionRes: {
         padding: theme.spacing(2),
         textAlign: 'center',
-        height: 130,
+        //width: "100%",
+        height: 240,
         //backgroundColor: 'blue',
         color: theme.palette.text.black,
         transition: 'ease-in-out 0.4s',
@@ -173,7 +178,7 @@ export const useStyles = makeStyles((theme) => ({
         }
     },
     softwareServiceCard: {
-        margin: '0 0px',
+        margin: '0 5px',
         width: "50%",
         [theme.breakpoints.down(896)]: {
             margin: '15px 0',

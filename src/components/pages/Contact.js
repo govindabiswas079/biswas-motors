@@ -38,7 +38,7 @@ const Contact = () => {
                                         <Grid container justifyContent="center" spacing={spacing}>
                                             <Box boxShadow={2} m={1}>
                                                 <Grid item>
-                                                    <Paper className={classes.paper}>
+                                                    <Paper elevation={4} className={classes.paper}>
                                                         {/* <img src={img2} className={classes.heroSectionImage} alt="img" /> */}
                                                         <CallEndRounded className={classes.heroSectionImage} />
                                                         <h4 className={classes.heroSectionContent}>CALL US</h4>
@@ -49,7 +49,7 @@ const Contact = () => {
                                             </Box>
                                             <Box boxShadow={2} m={1}>
                                                 <Grid item>
-                                                    <Paper className={classes.paper}>
+                                                    <Paper elevation={4} className={classes.paper}>
                                                         {/* <img src={img2} className={classes.heroSectionImage} alt="img" /> */}
                                                         <EmailRounded className={classes.heroSectionImage} />
                                                         <h4 className={classes.heroSectionContent}>EMAIL US</h4>
@@ -70,7 +70,7 @@ const Contact = () => {
                                         <Grid container justifyContent="center" spacing={spacing}>
                                             <Box boxShadow={2} m={1}>
                                                 <Grid item>
-                                                    <Paper className={classes.paper}>
+                                                    <Paper elevation={4} className={classes.paper}>
                                                         {/* <img src={img2} className={classes.heroSectionImage} alt="img" /> */}
                                                         <ContactMail className={classes.heroSectionImage} />
                                                         <h4 className={classes.heroSectionContent}>ADDRESS</h4>
@@ -82,7 +82,7 @@ const Contact = () => {
 
                                             <Box boxShadow={2} m={1}>
                                                 <Grid item>
-                                                    <Paper className={classes.paper}>
+                                                    <Paper elevation={4} className={classes.paper}>
                                                         {/* <img src={img2} className={classes.heroSectionImage} alt="img" /> */}
                                                         <WatchRounded className={classes.heroSectionImage} />
                                                         <h4 className={classes.heroSectionContent}>WORKING HOURS</h4>

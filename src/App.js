@@ -18,9 +18,9 @@ const App = () => {
           <Route exact path="/service" component={Service} />
           <Route exact path="/contact" component={Contact} />
         </Switch>
-        {/* <br />
         <br />
-        <Footer /> */}
+        <br />
+        <Footer />
       </BrowserRouter>
     </div>
   )

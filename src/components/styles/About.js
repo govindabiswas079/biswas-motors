@@ -53,12 +53,12 @@ export const useStyles = makeStyles((theme) => ({
     },
     serviceSectionPaper: {
         textAlign: 'center',
-        height: 338,
+        height: 400,
         width: '270px',
         transition: 'ease-in-out 0.4s',
         position: 'relative',
         '&:Hover': {
-            transform: 'scale(1.03)',
+            transform: 'scale(1.02)',
 
         },
         /* [theme.breakpoints.down(512)]: {
@@ -97,5 +97,34 @@ export const useStyles = makeStyles((theme) => ({
             marginTop: "45px",
             //height: 350,
         }
-    }
+    },
+
+    contactImage: {
+        height: "515px",
+        borderRadius: 5,
+        [theme.breakpoints.down(862)]: {
+            margin: '20px'
+        }
+    },
+    contactSection: {
+        display: 'flex',
+        justifyContent: 'center',
+        [theme.breakpoints.down(862)]: {
+            flexDirection: 'column',
+        }
+    },
+    contactPaper: {
+        padding: theme.spacing(2)
+    },
+    contactForm: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center'
+    },
+    contactTextField: {
+        margin: 20
+    },
+    contactButton: {
+        marginBottom: 30,
+    },
 }));
